@@ -13,7 +13,16 @@ public class Alumno {
     private String nombre;
     private String correo;
     private String direccion;
+    private int telefono;
 
+    public int getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(int telefono) {
+        this.telefono = telefono;
+    }
+    
     public int getCodigo() {
         return codigo;
     }

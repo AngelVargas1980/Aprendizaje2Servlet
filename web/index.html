@@ -96,9 +96,10 @@
 
       <div></div><br> <br>     
 
-        <div class="container">
-            <h1>Formulario de Registros de estudiantes</h1>
+        <div class="container" >
             <a href="servlet23">Click aqui</a>
+            <h1>Formulario de Registros de clientes</h1>
+            
             <!--  <a href="miurl">Click aqui</a> -->
             <!-- <form action="nuevoServlet">
                 <input type="text"><br> <br>
@@ -106,33 +107,50 @@
                 <input type="submit" value="Save" name="nuevoServlet" />
             </form>  -->
 
-        
-           
-        <form action="servlet23">
-            <div class="pru1" align="right">
+                       
+        <form action="servlet23" href="servlet23">
+            <div class="pru1" align="right" href="servlet23">
                 
-            <div class="mb-3">
-                <label for="exampleInputName">Nombre del alumno</label>
+            <div class="mb-3" href="servlet23">
+                <label for="exampleInputName">Codigo del cliente</label>
+                <input class="form-control" type="text" placeholder="Ingresar codigo" name="codigo" >
+            </div> 
+                
+            <div class="mb-3" href="servlet23">
+                <label for="exampleInputName">Nombres y apellidos del cliente</label>
                 <input class="form-control" type="text" placeholder="Ingresar nombre" name="nombre" >
             </div>    
                 
-            <div class="mb-3">
+            <div class="mb-3" href="servlet23">
+                <label for="exampleInputEmail1" class="form-label" >Dirección de domicilio</label>
+                <input  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingresar tu dirección de domicilio" name="direccion">
+                <div id="emailHelp" class="form-text">Nunca compartiremos tu dirección de domicilio con nadie más.</div>
+            </div>
+            </div>  
+            
+            <div class="mb-3" href="servlet23">
                 <label for="exampleInputEmail1" class="form-label" >Dirección de Correo</label>
                 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingresar correo electronico" name="correo">
                 <div id="emailHelp" class="form-text">Nunca compartiremos tu correo electrónico con nadie más.</div>
             </div>
-            </div>  
             
-            <div class="mb-3">
+             <div class="mb-3" href="servlet23">
+                <label for="exampleInputPassword1" class="form-label">Teléfono</label>
+                <input class="form-control" id="exampleInputPassword1" placeholder="Ingresa tu número telefónico" name="telefono">
+            </div>
+            
+            
+            
+            <div class="mb-3" href="servlet23">
                 <label for="exampleInputPassword1" class="form-label">Password</label>
                 <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Ingresar contraseña" name="pass">
             </div>
-            <div class="mb-3 form-check">
+            <div class="mb-3 form-check" href="servlet23">
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
                 <label class="form-check-label" for="exampleCheck1">Echa un vistazo</label>
             </div>
             
-            <select class="form-control" name="opcion">
+            <select class="form-control" name="opcion" href="servlet23">
                 <option value="1">Opción 1</option>
                 <option value="2">Opción 2</option>
             </select><br>
@@ -148,6 +166,14 @@
           <br>
           <br>
           <br>
+            
+            </div>
+      
+           
+
+      
+            
+            
           
       </div>
 

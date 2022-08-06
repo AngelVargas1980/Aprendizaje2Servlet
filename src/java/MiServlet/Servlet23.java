@@ -35,10 +35,13 @@ public class Servlet23 extends HttpServlet {
             /* TODO output your page here. You may use following sample code. */
             
             alumno=new Alumno();    
-            String pass =  request.getParameter("pass");
-            String opcion =  request.getParameter("opcion");
+            String pass = (request.getParameter("pass"));
+            String opcion = (request.getParameter("codigo"));
             alumno.setNombre(request.getParameter("nombre"));
             alumno.setCorreo(request.getParameter("correo"));
+            alumno.setDireccion(request.getParameter("direccion"));
+            alumno.setDireccion(request.getParameter("telefono"));
+            
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
@@ -46,25 +49,24 @@ public class Servlet23 extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Mi primer servlet " + request.getContextPath() + "</h1>");
-            out.println("<h1>Datos del alumno registrado, gracias por registrarse </h1><br>"); 
+            out.println("<h1>Datos del cliente registrado, gracias por registrarse </h1><br>"); 
             out.println("<h1>Por cierto... cuesta un poco hacer un Servlet </h1><br>"); 
+            
+            out.println("<h2>" + alumno.getCodigo() + "</h2>");
             out.println("<h2>" + alumno.getNombre() + "</h2>");
             out.println("<h2>" + alumno.getCorreo() + "</h2>");
+            out.println("<h2>" + alumno.getDireccion() + "</h2>");
+            out.println("<h2>" + alumno.getTelefono() + "</h2>");
+            
             out.println("</body>");
             out.println("</html>");
             
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet Servlet23</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet Servlet23 at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+  
+            
         }
     }
-
+    
+    
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
@@ -74,12 +76,15 @@ public class Servlet23 extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
+    
+    
+    
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
     }
-
+    
     /**
      * Handles the HTTP <code>POST</code> method.
      *
@@ -88,12 +93,16 @@ public class Servlet23 extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
+    
+   
+    
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
     }
 
+    
     /**
      * Returns a short description of the servlet.
      *
@@ -105,3 +114,4 @@ public class Servlet23 extends HttpServlet {
     }// </editor-fold>
 
 }
+
